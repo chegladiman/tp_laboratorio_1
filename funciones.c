@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "funciones.h"
-#define CANT 5
+#define CANT 2
 
 void init(EPersona personas[]){
     int i;
@@ -34,6 +34,7 @@ int incluirPersona(EPersona personas[])
                     scanf("%l", &personas[i].dni);
 
                     personas[i].estado= 1;
+                    break;
                     }
                 }
 
@@ -56,11 +57,33 @@ int borrarPersona(){
 
 }
 
-void listaOrdenadaPorNombre(EPersona personas[])
+void ordenarPorNombre(EPersona personas[])
 {
     int i;
-    char nombreAux[50];
-    for(i=1;i<CANT;i++)
+    int j;
+    char nombreAuxiliar;
+
+    /*for(i=0;i<CANT-1;i++)
     {
-        strcpy(nombreAUx,personas[i].nombre);
-        printf("El nombre %d, es %s",i,nombreAux);
+        for(j=i+1;j<CANT;j++){
+
+        if (strcmp(nombre.nombre,personas[i].nombre)>0){
+        printf("El nombre %d. es %s",personas[i],nombreAuxiliar);
+        }
+
+
+    }
+//}
+//}
+*/
+            for(i=0;i<CANT-1;i++){
+
+            for(j=i+1;j<CANT;j++){
+            if((strcmp(personas[i].nombre,personas[j].nombre))>0)
+            {
+            nombreAuxiliar=personas[i];
+            personas[i]=pers[j];
+            personas[j]=nombreAuxiliar;
+            }
+            }
+            }

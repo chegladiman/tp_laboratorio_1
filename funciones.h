@@ -25,4 +25,6 @@ int obtenerEspacioLibre(EPersona lista[]);
  */
 int buscarPorDni(EPersona lista[], int dni);
 
+void init(EPersona personas[]);
+
 #endif // FUNCIONES_H_INCLUDED

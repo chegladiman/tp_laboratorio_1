@@ -34,6 +34,7 @@ int main()
                 borrarPersona(personas);
                 break;
             case 3:
+                ordenarPorNombre(personas);
                 break;
             case 4:
                 break;
