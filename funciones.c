@@ -55,3 +55,12 @@ int borrarPersona(){
     }
 
 }
+
+void listaOrdenadaPorNombre(EPersona personas[])
+{
+    int i;
+    char nombreAux[50];
+    for(i=1;i<CANT;i++)
+    {
+        strcpy(nombreAUx,personas[i].nombre);
+        printf("El nombre %d, es %s",i,nombreAux);
