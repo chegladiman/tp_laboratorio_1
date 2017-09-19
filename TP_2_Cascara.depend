@@ -22,14 +22,15 @@
 
 1461846544 c:\users\facu\desktop\tp personas\tp_2_cascara\funciones.h
 
-1505779677 source:c:\users\alumno\desktop\tp\funciones.c
-	<stdio.h>
-	<stdlib.h>
-
-1505777075 source:c:\users\alumno\desktop\tp\main.c
+1505783370 source:c:\users\alumno\desktop\tp\funciones.c
 	<stdio.h>
 	<stdlib.h>
 	"funciones.h"
 
-1505772499 c:\users\alumno\desktop\tp\funciones.h
+1505782944 source:c:\users\alumno\desktop\tp\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+
+1505783370 c:\users\alumno\desktop\tp\funciones.h
 

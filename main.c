@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "funciones.h"
+#define CANT 2
 
 
 
@@ -9,6 +10,9 @@ int main()
     char seguir='s';
     int opcion=0;
 
+    EPersona personas[CANT];
+
+    init(personas);
 
 
     while(seguir=='s')
@@ -24,10 +28,10 @@ int main()
         switch(opcion)
         {
             case 1:
-                incluirPersona();
+                incluirPersona(personas);
                 break;
             case 2:
-                borrarPersona();
+                borrarPersona(personas);
                 break;
             case 3:
                 break;

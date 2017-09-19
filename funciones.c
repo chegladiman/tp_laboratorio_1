@@ -1,15 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define CANT 1
-typedef struct {
-
-    char nombre[50];
-    int edad;
-    int estado;
-    long int dni;
-
-}EPersona;
-
+#include "funciones.h"
+#define CANT 5
 
 void init(EPersona personas[]){
     int i;
@@ -41,7 +33,7 @@ int incluirPersona(EPersona personas[])
                     printf("\nIngresar DNI:");
                     scanf("%l", &personas[i].dni);
 
-                    personas.estado= 1;
+                    personas[i].estado= 1;
                     }
                 }
 
