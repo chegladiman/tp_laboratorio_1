@@ -3,12 +3,13 @@
 #include "funciones.h"
 
 
+
 int main()
 {
     char seguir='s';
     int opcion=0;
-    int i;
-    EPersona personas[5];
+
+
 
     while(seguir=='s')
     {
@@ -23,29 +24,10 @@ int main()
         switch(opcion)
         {
             case 1:
-
-
-
-                for(i=0;i<21;i++){
-
-                    system("cls");
-
-                    printf("Ingresar nombre: ");
-                    fflush(stdin);
-                    scanf("%[^\n]", personas[i].nombre);
-
-                    printf("\nIngresar edad:");
-                    fflush(stdin);
-                    scanf("%d", personas[i].edad);
-
-                    printf("\nIngresar DNI:");
-                    fflush(stdin);
-                    scanf("%d", personas[i].dni);
-
-                }
-
+                incluirPersona();
                 break;
             case 2:
+                borrarPersona();
                 break;
             case 3:
                 break;
