@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "funciones.h"
 #include <string.h>
-#define CANT 20
+#define CANT 5
 
 
 void init(EPersona personas[])
@@ -38,7 +38,7 @@ int incluirPersona(EPersona personas[])
             personas[i].estado= 1;
             break;
         }
-    }
+    }return 0;
 }
 
 int borrarPersona(EPersona personas[])
@@ -55,7 +55,7 @@ int borrarPersona(EPersona personas[])
         {
             personas[i].estado=0;
         }
-    }
+    }return 0;
 }
 
 void ordenarPorNombre(EPersona personas[])

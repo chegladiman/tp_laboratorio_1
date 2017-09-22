@@ -29,17 +29,51 @@ int buscarPorDni(EPersona lista[], int dni);
 
 
 
+/**
+ * Recorre el array y lo inicializa en 0 (cero).
+ * @param lista el array se pasa como parametro.
+ * @return el indice inicializado en 0 (cero)
+ */
 void init(EPersona personas[]);
 
 
-
+/**
+ * Solicita ingresar datos de una persona.
+ * @param solicita que se ingrese el nombre
+ * @param solicita que se ingrese la edad.
+ * @param solicita que se ingrese el DNI.
+ * @return los datos ingresados.
+ */
 int incluirPersona(EPersona personas[]);
 
-int borrarPersona(EPersona personas[])
 
+
+/**
+ * Borra mediante DNI la persona ingresada.
+ * @param Solicita como parametro a ingresar el DNI.
+ * @return el registro completo sin los datos borrados.
+ */
+int borrarPersona(EPersona personas[]);
+
+
+
+/**
+ * Ordena por nombre de manera ascendente el registro de datos
+ * @param lista el array se pasa como parametro.
+ * @return la lista de personas orndenadas por nombre
+ */
 void ordenarPorNombre(EPersona personas[]);
 
-void graficoPorEdades(EPersona personas[])
+
+
+/**
+ * Muestra un gráfico de barras vertical sobre las edades.
+ * @param menor18 referencia a la edad.
+ * @param edad19a35 referencia a la edad.
+ * @param mayor35 referencia a la edad.
+ * @return gráfico de barras vertical simbolizado por asteriscos.
+ */
+void graficoPorEdades(EPersona personas[]);
 
 
 #endif // FUNCIONES_H_INCLUDED
