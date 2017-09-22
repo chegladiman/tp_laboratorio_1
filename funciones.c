@@ -1,89 +1,139 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "funciones.h"
-#define CANT 2
+#include <string.h>
+#define CANT 20
 
-void init(EPersona personas[]){
+
+void init(EPersona personas[])
+{
     int i;
-    for (i=0;i<CANT;i++)
+    for (i=0; i<CANT; i++)
     {
         personas[i].estado=0;
     }
 
-    }
+}
 
 int incluirPersona(EPersona personas[])
 {
     int i;
 
-    for(i=0;i<CANT;i++){
-            if(personas[i].estado==0){
+    for(i=0; i<CANT; i++)
+    {
+        if(personas[i].estado==0)
+        {
+            system("cls");
 
+            printf("Ingresar nombre: ");
+            fflush(stdin);
+            scanf("%[^\n]", personas[i].nombre);
 
+            printf("\nIngresar edad:");
+            scanf("%d", &personas[i].edad);
 
-                    system("cls");
+            printf("\nIngresar DNI:");
+            scanf("%d", &personas[i].dni);
 
-                    printf("Ingresar nombre: ");
-                    fflush(stdin);
-                    scanf("%[^\n]", personas[i].nombre);
-
-                    printf("\nIngresar edad:");
-                    scanf("%d", &personas[i].edad);
-
-                    printf("\nIngresar DNI:");
-                    scanf("%l", &personas[i].dni);
-
-                    personas[i].estado= 1;
-                    break;
-                    }
-                }
-
+            personas[i].estado= 1;
+            break;
+        }
+    }
 }
 
-int borrarPersona(){
+int borrarPersona(EPersona personas[])
+{
 
     int i;
-    EPersona personas[CANT];
-    long int dniAux;
+    int dniAuxiliar;
 
     printf("\nIngresar DNI:");
-    scanf("%l", &personas[i].dni);
-    for(i=0;i<CANT;i++){
-        if(personas[i].dni==dniAux)
-            {
+    scanf("%d", &dniAuxiliar);
+    for(i=0; i<CANT; i++)
+    {
+        if(personas[i].dni==dniAuxiliar)
+        {
             personas[i].estado=0;
-           }
+        }
     }
-
 }
 
 void ordenarPorNombre(EPersona personas[])
 {
     int i;
     int j;
-    char nombreAuxiliar;
+    char nombreAuxiliar[100];
 
-    /*for(i=0;i<CANT-1;i++)
+
+    for(i=0; i<CANT-1; i++)
     {
-        for(j=i+1;j<CANT;j++){
 
-        if (strcmp(nombre.nombre,personas[i].nombre)>0){
-        printf("El nombre %d. es %s",personas[i],nombreAuxiliar);
-        }
-
-
-    }
-//}
-//}
-*/
-            for(i=0;i<CANT-1;i++){
-
-            for(j=i+1;j<CANT;j++){
+        for(j=i+1; j<CANT; j++)
+        {
             if((strcmp(personas[i].nombre,personas[j].nombre))>0)
             {
-            nombreAuxiliar=personas[i];
-            personas[i]=pers[j];
-            personas[j]=nombreAuxiliar;
+                strcpy(nombreAuxiliar,personas[i].nombre);
+                strcpy(personas[i].nombre,personas[j].nombre);
+                strcpy(personas[j].nombre,nombreAuxiliar);
             }
-            }
-            }
+        }
+    }
+    printf("LISTA\n");
+    for(i = 0; i<CANT; i++)
+    {
+        if(personas[i].estado == 1)
+        {
+            printf("%s\n",personas[i].nombre);
+        }
+
+    }
+}
+
+
+
+void graficoPorEdades(EPersona personas[])
+{
+
+    int i;
+    int j;
+
+    int menor18 = 0;
+    int edad19a35 = 0;
+    int mayor35 = 0;
+
+    for(i = 0; i < CANT; i++)
+    {
+        if(personas[i].estado == 1)
+        {
+            if(personas[i].edad < 18)
+                menor18++;
+            else if(personas[i].edad >=19 && personas[i].edad < 35)
+                edad19a35++;
+            else
+                mayor35++;
+        }
+    }
+
+    int valor[2];
+    valor[0] = menor18;
+    valor[1] = edad19a35;
+    valor[2] = mayor35;
+    int max = 0;
+
+    for (i = 0; i < CANT; i++)
+        if (valor[i] > max)
+            max = valor[i];
+
+    for (i = max; i > 0; i--)
+    {
+        for (j = 0; j < 3; j++)
+            if (valor[j] >= i)
+                printf("    * ");
+            else
+                printf("      ");
+
+        putchar('\n');
+    }
+    printf("<18   19-35   >35");
+    putchar('\n');
+}

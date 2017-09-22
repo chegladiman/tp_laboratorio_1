@@ -1,0 +1,61 @@
+# depslib dependency file v1.0
+1461782418 source:c:\users\facu\desktop\facu\tp_2_cascara\tp_2_cascara\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+
+1461846544 c:\users\facu\desktop\facu\tp_2_cascara\tp_2_cascara\funciones.h
+
+1505607765 source:c:\users\facu\desktop\facu\tp personas\tp_2_cascara\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+
+1461846544 c:\users\facu\desktop\facu\tp personas\tp_2_cascara\funciones.h
+
+1505682100 source:c:\users\facu\desktop\tp personas\tp_2_cascara\funciones.c
+
+1505683451 source:c:\users\facu\desktop\tp personas\tp_2_cascara\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+
+1461846544 c:\users\facu\desktop\tp personas\tp_2_cascara\funciones.h
+
+1505783370 source:c:\users\alumno\desktop\tp\funciones.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+
+1505782944 source:c:\users\alumno\desktop\tp\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+
+1505783370 c:\users\alumno\desktop\tp\funciones.h
+
+1505861662 source:c:\users\alumno\desktop\tp2\funciones.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+
+1505859208 c:\users\alumno\desktop\tp2\funciones.h
+
+1505862006 source:c:\users\alumno\desktop\tp2\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+
+1506050291 source:c:\users\facu\desktop\fafufufufu\funciones.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+	<string.h>
+
+1506048941 c:\users\facu\desktop\fafufufufu\funciones.h
+
+1506050651 source:c:\users\facu\desktop\fafufufufu\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+
